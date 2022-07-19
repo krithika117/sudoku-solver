@@ -241,7 +241,7 @@ function gridsGood(board) {
 // }
 
 function updateBoard(board) {
-    document.getElementById(answerBoard).innerHTML = ""
+    // document.getElementById(answerBoard).innerHTML = ""
     if (board == false) {
         document.getElementById(answerBoard).innerHTML = "NO SOLUTION EXISTS TO THE GIVEN BOARD"
 
@@ -259,10 +259,12 @@ function updateBoard(board) {
 }
 
 function inputIsInvalid() {
-    document.getElementById(answerBoard).innerHTML = "THE GIVEN BOARD IS INVALID"
+    // document.getElementById(answerBoard).innerHTML = "THE GIVEN BOARD IS INVALID"
+    alert("THE GIVEN BOARD IS INVALID")
 }
 
 function overallReset() {
+    // document.getElementById(answerBoard).innerHTML = ""
     for (var i = 1; i <= 81; i++) {
         document.getElementById(i).value = "";
         console.log("Reset worked at" + i)
