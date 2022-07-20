@@ -11,7 +11,6 @@ body {
 
 p {
     text-align: center;
-    color: rgb(57, 57, 57);
 }
 
 html {
@@ -124,20 +123,16 @@ body.night {
 }
 
 button.night {
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(91, 89, 89);
     color: #fff;
 }
 
 table.night tr td input {
     border: #fff;
-    background-color:#212121;
+    background-color: #212121;
     border: 1px solid rgb(49, 49, 49);
     color: white;
 }
-
-/* input.night{
-    background:#212121;
-} */
 
 @media only screen and (max-width: 600px) {
 
