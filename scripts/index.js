@@ -1,3 +1,16 @@
+var content = document.body;
+var darkMode = document.getElementById('dark-change');
+var b1 = document.getElementById('b1');
+var b2 = document.getElementById('b2');
+var tab = document.getElementsByTagName('table')[0];
+darkMode.addEventListener('click', function () {
+    darkMode.classList.toggle('active');
+    content.classList.toggle('night');
+    b1.classList.toggle('night');
+    b2.classList.toggle('night');
+    tab.classList.toggle('night');
+})
+
 const b = null
 
 var bd1 = [
@@ -61,7 +74,7 @@ function initiate() {
         if (val == "") {
             startingBoard[j].push(null)
         } else if (val > 9 || val <= 0) {
-            alert("Please enter valid input")
+            toastProduce("Please enter valid input")
             break;
         } else {
             startingBoard[j].push(Number(val))
@@ -221,9 +234,9 @@ function gridsGood(board) {
 }
 
 
-function updateBoard(board) {    
+function updateBoard(board) {
     if (board == false) {
-        document.getElementById(answerBoard).innerHTML = "NO SOLUTION EXISTS TO THE GIVEN BOARD"
+        toastProduce("No Solution can be produced");
 
     } else {
         var k = 1;
@@ -239,32 +252,31 @@ function updateBoard(board) {
 }
 
 function inputIsInvalid() {
-    // alert("THE GIVEN BOARD IS INVALID")
-    toastProduce("Board is Invalid")
+    toastProduce("The Board is Invalid")
 }
 
 function overallReset() {
     for (var i = 1; i <= 81; i++) {
         document.getElementById(i).value = "";
-        //console.log("Reset worked at" + i)
     }
 }
 
+//Toastify for toast messages
 function toastProduce(msg) {
     Toastify({
         text: msg,
         duration: 3000,
-        gravity: "bottom", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
+        gravity: "bottom",
+        position: "center",
+        stopOnFocus: true,
         style: {
-          background: "rgb(29, 29, 29)",
-          color: "#fff",
-          
+            background: "rgb(29, 29, 29)",
+            color: "#fff",
+
         },
-        onClick: function(){} // Callback after click
-      }).showToast();
-        
-        
-  }
+        onClick: function () {}
+    }).showToast();
+
+
+}
 //console.log(solve(bd2))

@@ -14,14 +14,6 @@ p {
     color: rgb(57, 57, 57);
 }
 
-:root {
-    background-color: rgba(230, 230, 230, 0.311);
-    background-image:
-        linear-gradient(90deg, rgba(219, 219, 219, 0.187) 50%, transparent 50%),
-        linear-gradient(rgba(215, 215, 215, 0.167) 50%, transparent 50%);
-    background-size: 10px 10px;
-}
-
 html {
     display: table;
     margin: auto;
@@ -30,6 +22,11 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
+    background-color: rgba(230, 230, 230, 0.311);
+    background-image:
+        linear-gradient(90deg, rgba(219, 219, 219, 0.187) 50%, transparent 50%),
+        linear-gradient(rgba(215, 215, 215, 0.167) 50%, transparent 50%);
+    background-size: 10px 10px;
 }
 
 table {
@@ -63,7 +60,6 @@ h1 {
 }
 
 button {
-
     width: 8rem;
     cursor: pointer;
     background-color: rgb(29, 29, 29);
@@ -94,7 +90,54 @@ tr:nth-child(3n) td {
     border-bottom: solid;
 }
 
+label {
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 20px;
+    top: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+}
 
+label:before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+label.active:before {
+    left: 24px;
+    background: #fff;
+}
+
+body.night {
+    background: #212121;
+    color: #fff;
+}
+
+button.night {
+    background-color: rgb(117, 117, 117);
+    color: #fff;
+}
+
+table.night tr td input {
+    border: #fff;
+    background-color:#212121;
+    border: 1px solid rgb(49, 49, 49);
+    color: white;
+}
+
+/* input.night{
+    background:#212121;
+} */
 
 @media only screen and (max-width: 600px) {
 

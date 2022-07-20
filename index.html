@@ -8,9 +8,14 @@
     <title>Sudoku Solver</title>
     <link href="style/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <header>
+        <label id="dark-change"></label>
+      </header>
+    
     <h1>Sudoku Solver</h1>
     
         <table>
@@ -117,8 +122,8 @@
             </div>
             </table>
             <div class="buttons">
-                <button onClick="initiate()">Solve</button>
-                <button onClick="overallReset()">Reset</button>
+                <button id="b1" onClick="initiate()">Solve</button>
+                <button id="b2" onClick="overallReset()">Reset</button>
             </div>
             
             <p>Developed by Krithika Nithyanandam :)</p>
