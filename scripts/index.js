@@ -220,28 +220,8 @@ function gridsGood(board) {
     return true
 }
 
-// function updateBoard(board) {
-//     if (board == false) {
-//         for (i = 1; i <= 9; i++) {
-//             document.getElementById("row " + String(i)).innerHTML = "NO SOLUTION EXISTS TO THE GIVEN BOARD"
-//         }
-//     } else {
-//         for (var i = 1; i <= 9; i++) {
-//             var row = ""
-//             for (var j = 0; j < 9; j++) {
-//                 if (row == "") {
-//                     row = row + String(board[i - 1][j])
-//                 } else {
-//                     row = row + "\xa0\xa0\xa0\xa0\xa0\xa0\xa0" + String(board[i - 1][j])
-//                 }
-//             }
-//             document.getElementById("row " + String(i)).innerHTML = row
-//         }
-//     }
-// }
 
-function updateBoard(board) {
-    // document.getElementById(answerBoard).innerHTML = ""
+function updateBoard(board) {    
     if (board == false) {
         document.getElementById(answerBoard).innerHTML = "NO SOLUTION EXISTS TO THE GIVEN BOARD"
 
@@ -259,16 +239,32 @@ function updateBoard(board) {
 }
 
 function inputIsInvalid() {
-    // document.getElementById(answerBoard).innerHTML = "THE GIVEN BOARD IS INVALID"
-    alert("THE GIVEN BOARD IS INVALID")
+    // alert("THE GIVEN BOARD IS INVALID")
+    toastProduce("Board is Invalid")
 }
 
 function overallReset() {
-    // document.getElementById(answerBoard).innerHTML = ""
     for (var i = 1; i <= 81; i++) {
         document.getElementById(i).value = "";
-        console.log("Reset worked at" + i)
+        //console.log("Reset worked at" + i)
     }
 }
 
-console.log(solve(bd2))
+function toastProduce(msg) {
+    Toastify({
+        text: msg,
+        duration: 3000,
+        gravity: "bottom", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "rgb(29, 29, 29)",
+          color: "#fff",
+          
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+        
+        
+  }
+//console.log(solve(bd2))

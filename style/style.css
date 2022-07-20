@@ -1,9 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@300;400;500;600&display=swap');
+
 
 html,
 body {
-    font-family: 'Quicksand';
+    padding: 2px;
+    font-family: 'Patrick Hand', cursive;
     height: 100%;
+    overflow: hidden;
+}
+
+p {
+    text-align: center;
+    color: rgb(57, 57, 57);
+}
+
+:root {
+    background-color: rgba(230, 230, 230, 0.311);
+    background-image:
+        linear-gradient(90deg, rgba(219, 219, 219, 0.187) 50%, transparent 50%),
+        linear-gradient(rgba(215, 215, 215, 0.167) 50%, transparent 50%);
+    background-size: 10px 10px;
 }
 
 html {
@@ -16,12 +32,23 @@ body {
     vertical-align: middle;
 }
 
+table {
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 input {
     width: 2.5rem;
     height: 2.5rem;
-    font-family: 'Quicksand';
-    border: 1px solid rgb(71, 141, 158);
+    font-family: 'Arial';
+    border: none;
     text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+td {
+    border: 1px solid rgb(169, 169, 169);
 }
 
 .buttons {
@@ -30,43 +57,50 @@ input {
     align-items: center;
 }
 
-h2 {
+h1 {
     text-align: center;
-    margin: 0;
+    margin-bottom: 0.6rem;
 }
 
 button {
+
+    width: 8rem;
     cursor: pointer;
-    background-color: rgb(71, 141, 158);
+    background-color: rgb(29, 29, 29);
     color: white;
-    padding: 0.5rem 0.8rem;
-    border-radius: 0.3rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
     border: none;
-    font-family: 'Quicksand';
-    margin: 0.4rem;
+    font-family: 'Arial';
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
+
+td:first-child {
+    border-left: solid;
+
+}
+
+td:nth-child(3n) {
+    border-right: solid;
+}
+
+tr:first-child {
+    border-top: solid;
+}
+
+tr:nth-child(3n) td {
+    border-bottom: solid;
+}
+
+
 
 @media only screen and (max-width: 600px) {
 
-    html,
-    body {
-        font-family: 'Quicksand';
-        height: 100%;
-    }
-
-    html {
-        display: table;
-        margin: auto;
-    }
-
-    body {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
     input {
-        width: 2rem;
-        height: 2rem;
+        width: 1.8rem;
+        height: 1.8rem;
     }
 
 }
