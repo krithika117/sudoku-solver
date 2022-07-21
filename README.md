@@ -24,6 +24,8 @@ Toastify JS: https://apvarun.github.io/toastify-js/
 ```
 https://www.sudokuonline.io/tips/sudoku-rules
 
+https://www.simplilearn.com/tutorials/data-structure-tutorial/backtracking-algorithm
+
 https://github.com/JackHeTech/Sudoku-Solver
 ```
 
