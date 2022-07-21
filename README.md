@@ -1,5 +1,5 @@
 # Sudoku Solver
-Sudoku is a puzzle in which players insert the numbers one to nine into a grid consisting of nine squares subdivided into a further nine smaller squares in such a way that every number appears once in each horizontal line, vertical line, and square. This Sudoku Solver, gets the input of the available values and gives the solution through a 3-step procedure of validation, generative recursion and backtracking search.
+Sudoku is a puzzle in which players insert the numbers one to nine into a grid consisting of nine squares subdivided into a further nine smaller squares in such a way that every number appears once in each horizontal line, vertical line, and square. This light-weight Sudoku Solver, gets the input of the available values and gives the solution through a 3-step procedure of validation, generative recursion and backtracking search.
 
 ## Working
 ### Rules of Sudoku
