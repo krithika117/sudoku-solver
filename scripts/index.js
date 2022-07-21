@@ -1,6 +1,3 @@
-
-const b = null
-
 function initiate() {
     var startingBoard = [
         []
@@ -35,7 +32,7 @@ function solve(board) {
         return board
     } else {
         const possibilities = nextBoards(board)
-        const validBoards = keepOnlyValid(possibilities)
+        const validBoards = keepOnlyValid(possibilities) 
         return searchForSolution(validBoards)
     }
 }
