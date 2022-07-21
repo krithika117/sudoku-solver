@@ -7,6 +7,10 @@ body {
     font-family: 'Patrick Hand', cursive;
     height: 100%;
     overflow: hidden;
+
+
+
+
 }
 
 p {
@@ -26,6 +30,8 @@ body {
         linear-gradient(90deg, rgba(219, 219, 219, 0.187) 50%, transparent 50%),
         linear-gradient(rgba(215, 215, 215, 0.167) 50%, transparent 50%);
     background-size: 10px 10px;
+    opacity: 0;
+    transition: opacity 3s;
 }
 
 table {
@@ -143,6 +149,8 @@ table.night tr td input {
     border: 1px solid rgb(49, 49, 49);
     color: white;
 }
+
+
 
 @media only screen and (max-width: 600px) {
 
