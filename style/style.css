@@ -120,11 +120,21 @@ label.active:before {
 body.night {
     background: #212121;
     color: #fff;
+
+    background-image:
+        linear-gradient(90deg, rgba(50, 50, 50, 0.187) 50%, transparent 50%),
+        linear-gradient(rgba(49, 49, 49, 0.167) 50%, transparent 50%);
+    background-size: 10px 10px;
 }
 
 button.night {
     background-color: rgb(91, 89, 89);
     color: #fff;
+}
+
+table.night {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 table.night tr td input {
