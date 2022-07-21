@@ -236,7 +236,7 @@ function gridsGood(board) {
 
 function updateBoard(board) {
     if (board == false) {
-        toastProduce("No Solution can be produced");
+        toastProduce("Sorry. No solution can be produced.");
 
     } else {
         var k = 1;
@@ -252,13 +252,14 @@ function updateBoard(board) {
 }
 
 function inputIsInvalid() {
-    toastProduce("The Board is Invalid")
+    toastProduce("Sorry. The Board is Invalid. Please check the values.");
 }
 
 function overallReset() {
     for (var i = 1; i <= 81; i++) {
         document.getElementById(i).value = "";
     }
+    toastProduce("Your board has been reset.")
 }
 
 //Toastify for toast messages
